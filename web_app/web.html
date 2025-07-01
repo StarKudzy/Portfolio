@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Routine Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+        h1 { color: #2c3e50; }
+        ul { padding-left: 0; }
+        li { list-style: none; margin-bottom: 10px; }
+        .done { text-decoration: line-through; color: gray; }
+        form input[type="text"] { padding: 5px; width: 70%; }
+        form input[type="submit"] { padding: 5px 10px; }
+        .btns { margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🗓️ My Daily Routine</h1>
+
+    <form method="POST">
+        <input type="text" name="task" placeholder="New task..." required>
+        <input type="submit" value="Add Task">
+    </form>
+
+    <ul>
+       
+        <li>
+            <span class="{{ 'done' if task.done }}">{{ task.name }}</span>
+            <a class="btns" href="/done/{{ loop.index0 }}">✅</a>
+            <a class="btns" href="/delete/{{ loop.index0 }}">🗑️</a>
+        </li>
+       
+    </ul>
+</body>
+</html>

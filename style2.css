@@ -1,0 +1,191 @@
+ 
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color:white;
+  background-image: url("images/pexels-lum3n-44775-399160.jpg"); /* Replace with your image name */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* optional: makes it stay while scrolling */
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  height: 30px;
+  color: aliceblue;
+}
+
+ h1 {
+
+  font-size: 3rem;
+  color:white;
+  background: center;
+  background-size: cover;
+  text-align: center;
+  font-style: oblique;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #130e01;
+  
+}
+.text {
+  position: relative;
+  color: rgb(15, 13, 13); 
+  font-size: 3rem;
+  padding: 60px 6px;
+  background-color: #f3c3e8;
+  color: rgb(14, 1, 1);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  
+}
+
+.nav {
+  margin-block-end: 30px;
+  text-decoration: none;
+  color: #10d94f;
+  font-weight: 500;
+  position: relative;
+}
+.nav-buttons {
+  padding: 20px 6px;
+  background-color: #8fa9c4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+}
+.nav-buttons:hover {
+  background-color: #f3c;
+}
+.tabs-container {
+  display:flex;
+  gap: 150px;
+  padding: 0px;
+  top: -30px;
+  position: relative;
+}
+
+.tab {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tab img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  
+}
+
+.tab-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: #ebb6de;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  background-color: #bf32c1;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #007BFF;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.intro-message {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 32px;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
