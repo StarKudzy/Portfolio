@@ -37,24 +37,29 @@
 </form>
 
 <script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbw2IEtnpZHrMD9h-zpikwr9a8bixrY9U8yq_2xhS3n_B5rNp1mnlraFKITDjtRD-jNm/exec"; // Paste it here
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw2IEtnpZHrMD9h-zpikwr9a8bixrY9U8yq_2xhS3n_B5rNp1mnlraFKITDjtRD-jNm/exec";
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", e => {
     e.preventDefault();
 
+    const formData = new FormData(form); // Required for Google Apps Script
+
     fetch(scriptURL, {
       method: "POST",
-      body: JSON.stringify({
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      })
+      body: formData
     })
-    .then(response => alert("Message sent!"))
-    .catch(error => alert("Error!"));
+    .then(response => {
+      alert("Message sent!");
+      form.reset(); // ✅ Clear input fields
+    })
+    .catch(error => {
+      alert("Error sending message.");
+      console.error("Error:", error);
+    });
   });
 </script>
+
 
   </div>
 </section>
