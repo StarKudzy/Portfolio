@@ -29,24 +29,32 @@
   </div>
 
   <div class="contact-form">
-  <form action="https://formsubmit.co/starkchamunorwa2904@gmail.com" method="POST">
-  <!-- Prevent spam -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <!-- Redirect after submit -->
-  <input type="hidden" name="_next" value="thankyou.html">
-
-  <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required /><br />
-
-  <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required /><br />
-
-  <label for="message">Message:</label><br />
-  <textarea id="message" name="message" rows="5" required></textarea><br />
-
+  <form id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required><br>
+  <input type="email" name="email" placeholder="Your Email" required><br>
+  <textarea name="message" placeholder="Your Message" required></textarea><br>
   <button type="submit">Send</button>
 </form>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw2IEtnpZHrMD9h-zpikwr9a8bixrY9U8yq_2xhS3n_B5rNp1mnlraFKITDjtRD-jNm/exec"; // Paste it here
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify({
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      })
+    })
+    .then(response => alert("Message sent!"))
+    .catch(error => alert("Error!"));
+  });
+</script>
 
   </div>
 </section>
