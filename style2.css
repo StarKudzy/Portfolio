@@ -72,7 +72,7 @@ header {
   display:flex;
   gap: 150px;
   padding: 0px;
-  top: -30px;
+  top: 10px;
   position: relative;
 }
 
